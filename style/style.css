@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.editorWrapper {
+    font-family: sans-serif;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.editorHeader{
+    padding-left: 20px;
+}
+.CodeMirror  {
+    width: 50%;
+    height: 100vh;
+    font-size: 16px;
+}
+.editorPlace {
+    display: flex;
+}
+.view {
+    border: 1px solid #282a36;
+    height: 100vh;
+    width: 50%;
+    padding: 0 10px 10px 10px;
+}  
+
+.check {
+
+    background-color: red;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.correct {
+    background-color: green;
+}

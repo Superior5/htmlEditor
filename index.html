@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.38.0/codemirror.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css"
+        integrity="sha512-gFMl3u9d0xt3WR8ZeW05MWm3yZ+ZfgsBVXLSOiFz2xeVrZ8Neg0+V1kkRIo9LikyA/T9HuS91kDfc2XWse0K0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/theme/dracula.min.css"
+        integrity="sha512-gFMl3u9d0xt3WR8ZeW05MWm3yZ+ZfgsBVXLSOiFz2xeVrZ8Neg0+V1kkRIo9LikyA/T9HuS91kDfc2XWse0K0A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/mode/xml/xml.min.js"
+        integrity="sha512-LarNmzVokUmcA7aUDtqZ6oTS+YXmUKzpGdm8DxC46A6AHu+PQiYCUlwEGWidjVYMo/QXZMFMIadZtrkfApYp/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closetag.min.js"
+        integrity="sha512-XYx5xhl4B5vKNlaRBWh/nlti0+IPM6eT+dSFc3/oc4rERn2DpwbS3q4OblprqqBLXyRSVePKmf+8mHkDLtGZpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./codemirror-master/dist/emmet.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="editorWrapper">
+        <div class="editorHeader">
+            <h1>Практика HTML</h1>
+            <p>Добавтье на страницу заголовки от h1 до h6</p>
+            <div class="check">
+                Неправильно, пробуй еще
+            </div>
+        </div>
+        <div class="editorPlace">
+            <textarea id="editor"><h1>Обана</h1>
+<h2>нормальный конь</h2>
+<p>зачетный</p></textarea>
+            <div class="view"></div>
+        </div>
+    </div>
+    <script>
+        let editor = CodeMirror.fromTextArea(
+            document.getElementById('editor'), {
+            mode: 'xml',
+            theme: 'dracula',
+            lineNumbers: true,
+            autoCloseTags: true,
+            fontSize: 10
+        }
+        );
+        emmetCodeMirror(editor)
+    </script>
+    <script src="./js/index.js"></script>
+
+
+</body>
+
+</html>
